@@ -7,11 +7,20 @@ public class Client {
         order.attach(priceObserver);
         order.attach(quantityObserver);
 
-        // Exemple de mise à jour de la commande
         order.updateOrder(250, 6);
         System.out.println(order);
 
         order.updateOrder(150, 4);
+        System.out.println(order);
+
+        // Testing PriceObserver update
+        priceObserver.update(order);
+        System.out.println("After PriceObserver update:");
+        System.out.println(order);
+
+        // Testing QuantityObserver update
+        quantityObserver.update(order);
+        System.out.println("After QuantityObserver update:");
         System.out.println(order);
     }
 }
