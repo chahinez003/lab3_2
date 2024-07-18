@@ -5,6 +5,7 @@ class QuantityObserver implements OrderObserver {
             order.setShippingCost(0);
         } else {
             order.setShippingCost(10);
+
         }
     }
 }

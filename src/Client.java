@@ -7,7 +7,7 @@ public class Client {
         order.attach(priceObserver);
         order.attach(quantityObserver);
 
-        order.updateOrder(250, 6);
+        order.updateOrder(201, 6);
         System.out.println(order);
 
         order.updateOrder(150, 4);
@@ -22,5 +22,7 @@ public class Client {
         quantityObserver.update(order);
         System.out.println("After QuantityObserver update:");
         System.out.println(order);
+
+
     }
 }
