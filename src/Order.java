@@ -6,7 +6,7 @@ public class Order {
     private int itemQuantity;
     private double shippingCost;
     private List<OrderObserver> observer = new ArrayList<>();
-
+    private String id ;
 
     public void attach (OrderObserver observers) {
         observer.add(observers);
@@ -43,5 +43,16 @@ public class Order {
 
     public void setShippingCost(double shippingCost) {
         this.shippingCost = shippingCost;
+    }
+
+    public void addItem(double price) {
+        // Update item quantity
+        this.itemQuantity++;
+
+        // Update total price
+        this.totalPrice += price;
+
+        // Notify observers
+        notifyObservers();
     }
 }

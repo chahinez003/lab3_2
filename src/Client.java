@@ -22,7 +22,17 @@ public class Client {
         quantityObserver.update(order);
         System.out.println("After QuantityObserver update:");
         System.out.println(order);
+        System.out.println();
 
+        //Testing addItems:
+        order.addItem(10.5);
+        order.addItem(100);
+        order.addItem(26);
+        order.addItem(250);
 
+        System.out.println("Final Order Total Price: $" + order.getTotalPrice());
+        System.out.println("Final quantity: " + order.getCount());
+        System.out.println();
+        System.out.println("Thank you !");
     }
 }
